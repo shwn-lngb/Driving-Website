@@ -47,9 +47,13 @@ section.feedback-section {
 .feedback-form button {
 	padding: 0.6em;
 	margin-top: 2em;
+	transition: background 0.2s ease-in-out;
 	background: rgb(212, 164, 42);
 	color: white;
 	font-size: 1.05em;
+}
+.feedback-form button:hover {
+	background: rgb(236, 172, 52);
 }
 .fb-input-icon {
 	position: relative;

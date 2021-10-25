@@ -51,10 +51,14 @@ section.course-form-container {
 	width: 60%;
 	padding: 0.6em 0;
 	margin-top: 1.5em;
+	margin-bottom: 5em;
+	transition: background 0.2s ease-in-out;
 	background: rgb(211, 132, 43);
 	color: #fff;
 	text-transform: uppercase;
-	margin-bottom: 5em;
+}
+.course-form-container form button:hover {
+	background: rgb(241, 153, 53);
 }
 .design-form {
 	width: 100%;
