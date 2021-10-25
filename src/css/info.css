@@ -1,0 +1,108 @@
+/* main {
+	width: 70%;
+	margin: auto;
+} */
+.box-container {
+	display: flex;
+	flex-flow: column;
+}
+
+.boxes {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-inline: 1em;
+}
+
+.box:not(:last-child) {
+	margin-right: 2.8em;
+}
+.box {
+	position: relative;
+	max-width: 30%;
+	min-width: 15%;
+	padding: 2em;
+	box-shadow: 0 0 12px rgba(69, 44, 85, 0.712);
+	background: rgb(49, 44, 56);
+	color: rgb(221, 220, 220);
+}
+.h2-padding {
+	margin-bottom: 1em;
+}
+.box i {
+	color: var(--color1);
+	font-size: 1.6em;
+	margin-bottom: 0.3em;
+}
+.box1 {
+	outline: 1px solid #5e00bf;
+}
+.box2 {
+	outline: 1px solid #5e00bf;
+}
+.box3 {
+	outline: 1px solid #5e00bf;
+}
+.box4 {
+	display: grid;
+	place-items: center;
+	margin-bottom: 2.5em;
+	text-align: center;
+}
+@media (max-width: 900px) {
+	.boxes {
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+	}
+	.box {
+		min-width: 80%;
+		max-width: 80%;
+		text-align: center;
+	}
+	.box:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 2em;
+	}
+}
+.icon-wrapper .icon {
+	width: 3.5em;
+	height: 3.5em;
+	display: grid;
+	place-items: center;
+	transform: rotate(45deg);
+}
+.icon-wrapper {
+	position: absolute;
+	top: 2.35em;
+	left: 0;
+	transform: translate(-50%, -50%);
+}
+.icon-wrapper .icon i {
+	color: #fff;
+	transform: rotate(-45deg);
+	margin-bottom: 1px;
+}
+.icon-wrapper .icon {
+	background: #a52aff;
+}
+
+.box2 button {
+	margin-top: 2em;
+	padding: 0.6em 1.6em;
+	margin-left: 0.4em;
+	transition: background 0.2s ease-in-out;
+	background: rgb(204, 89, 108);
+	color: rgb(250, 248, 248);
+}
+.box2 button:hover {
+	background: rgb(204, 57, 81);
+}
+.box h2 {
+	font-size: 1.4em;
+	color: var(--color1);
+	text-align: center;
+}
+.box p {
+	padding-left: 0.4em;
+}

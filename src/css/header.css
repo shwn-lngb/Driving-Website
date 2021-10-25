@@ -1,0 +1,73 @@
+header .background {
+	padding-top: 3em;
+	background: var(--main-bg-color);
+	clip-path: ellipse(100% 52% at 48% 41%);
+	padding-bottom: 2em;
+}
+
+header .container {
+	position: relative;
+}
+
+header .header-items {
+	width: 40%;
+	margin: 5em 0 6em 0;
+	font-weight: 600;
+}
+header .header-items h1 {
+	font-size: 3em;
+	color: #fff;
+}
+header .header-items h1 span {
+	color: var(--color1);
+}
+header .header-items p {
+	margin-top: 0.6em;
+	color: rgb(200, 200, 200);
+	font-size: 1.1em;
+}
+header .header-items .display-1 {
+	margin-top: 1.3em;
+}
+header .header-button {
+	font-size: 1.1em;
+	border-radius: 20px/50%;
+	outline: none;
+	border: none;
+	background: transparent;
+	padding: 0.6em 2em;
+	margin-top: 3em;
+	cursor: pointer;
+	color: #fff;
+	background: linear-gradient(to right, #fd546b, #ff7bac);
+	transform: scale(1);
+	transition: transform 0.3s ease;
+}
+header .header-button:hover {
+	background: linear-gradient(to right, #ff1f3d, #ffbc2c);
+	transform: scale(1.01);
+}
+
+header .teacher {
+	position: absolute;
+	top: 18%;
+	right: 28%;
+	width: 6em;
+}
+header .car {
+	position: absolute;
+	top: 39%;
+	right: 3%;
+	width: 40em;
+
+	mix-blend-mode: luminosity;
+}
+@media (max-width: 800px) {
+	header .image {
+		display: none;
+	}
+	header .header-items {
+		width: 100%;
+		text-align: center;
+	}
+}

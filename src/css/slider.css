@@ -1,0 +1,154 @@
+.slider-container {
+	position: relative;
+	margin-top: 10em;
+	margin-bottom: 10em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 40%;
+	max-width: 40%;
+}
+
+.slider {
+	width: 100%;
+}
+.slider .image {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+	box-shadow: 3px 0 8px rgba(0, 0, 0, 0.281);
+}
+.instructor-info {
+	margin-top: 2em;
+}
+.slider-container button {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 2em;
+	color: rgb(0, 0, 0);
+	z-index: 2;
+}
+.slider-btn:hover {
+	color: black;
+}
+.slider-container .btn-left {
+	left: -2.5em;
+}
+
+.slider-container .btn-right {
+	right: -2.5em;
+}
+
+.fa-chevron-left:hover::after,
+.fa-chevron-right:hover::after {
+	background: white;
+}
+
+.single-slide {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	background: rgba(255, 255, 255, 0.822);
+	box-shadow: 3px 0 12px rgba(82, 81, 81, 0.575);
+	border-radius: 10px;
+	/* min-width: 600px;
+	max-width: 600px; */
+	width: 100%;
+	min-height: 400px;
+	/* padding-top: 4em; */
+}
+
+.slide {
+	width: 100%;
+	opacity: 0;
+	transition: 1s ease;
+}
+.slide.active {
+	opacity: 1;
+}
+.instructor-name {
+	margin-bottom: 1em;
+}
+.instructor-details {
+	color: rgb(36, 35, 35);
+	min-height: 400px;
+
+	padding: 4em 1em 2em 1em;
+}
+.tags {
+	display: flex;
+}
+
+.tags div {
+	margin-left: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+}
+.instructor-tag {
+	padding: 0 0.7em;
+	background: #4a3458;
+	color: white;
+	border-radius: 3px;
+
+	margin: 0 0.6em 0.3em 0;
+}
+@media (max-width: 800px) {
+	.slider-container button {
+		width: 40px;
+		height: 40px;
+	}
+	.slider-btn {
+		font-size: 1em;
+	}
+
+	.instructor-tag {
+		font-size: 0.8em;
+	}
+	.slider-container .btn-left {
+		left: 40%;
+		top: auto;
+		bottom: -3em;
+		transform: translate(-40%, 0%);
+	}
+
+	.slider-container .btn-right {
+		top: auto;
+		left: 60%;
+		bottom: -3em;
+		transform: translate(-60%, 0);
+	}
+	.slider-container {
+		min-width: 90%;
+		max-width: 90%;
+	}
+}
+.socials {
+	position: absolute;
+	bottom: 1em;
+	right: 2em;
+	display: flex;
+}
+.socials a i {
+	font-size: 1.2em;
+	color: rgb(39, 30, 42);
+	margin-right: 1em;
+}
+.instructor-container {
+	position: relative;
+	width: 100%;
+}

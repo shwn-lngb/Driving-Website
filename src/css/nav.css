@@ -1,0 +1,132 @@
+.navbar-container {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: var(--main-bg-color);
+	z-index: 4;
+}
+.navbar-container.scroll {
+	background: rgb(34, 32, 36);
+}
+.navbar {
+	position: relative;
+	margin: auto;
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* padding: 1em; */
+}
+
+.nav-logo {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	padding-block: 1em;
+}
+.nav-logo i {
+	font-size: 1.8em;
+	margin-right: 0.3em;
+	cursor: pointer;
+}
+.nav-logo span {
+	color: var(--color3);
+}
+.nav-logo-text {
+	font-size: 1.8em;
+}
+.nav-links {
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.nav-links a {
+	height: 100%;
+}
+.nav-links li {
+	height: 4em;
+	display: grid;
+	place-items: center;
+	padding-inline: 1em;
+}
+.hover-pointer {
+	cursor: pointer;
+}
+.nav-links a:hover {
+	background: rgb(173, 76, 230);
+	/* color: black; */
+}
+nav .hamburger-menu {
+	display: none;
+	position: relative;
+
+	height: 2em;
+	background: none;
+	z-index: 3;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hamburger-menu .hamburger {
+	position: relative;
+	width: 2.5em;
+	height: 0.3em;
+	background: var(--color3);
+	outline: none;
+	border-radius: 1px;
+	opacity: 1;
+}
+.hamburger.gold-ham {
+	background: rgb(255, 255, 255);
+}
+.hamburger-menu::before,
+.hamburger-menu::after {
+	content: "";
+	position: absolute;
+	width: 2.5em;
+	height: 0.3em;
+	background: white;
+	border-radius: 1px;
+}
+.hamburger-menu::before {
+	top: 0;
+	left: 0;
+	transition: transform 0.3s ease;
+}
+.hamburger-menu::after {
+	bottom: 0;
+	left: 0;
+	transition: transform 0.3s ease;
+}
+@media (max-width: 800px) {
+	.nav-links {
+		display: none;
+		padding-bottom: 2em;
+	}
+	nav .hamburger-menu {
+		display: grid;
+		place-items: center;
+	}
+}
+.open {
+	display: block;
+	position: absolute;
+	background: rgb(34, 32, 36);
+	top: 4em;
+	right: 0;
+	padding-top: 2em;
+	z-index: -1;
+}
+.hamburger-menu.ham::before {
+	transform: translateY(0.85em) rotate(45deg);
+}
+.hamburger-menu.ham::after {
+	transform: translateY(-0.85em) rotate(-45deg);
+}
+@media (max-width: 425px) {
+	nav h2 {
+		display: none;
+	}
+}

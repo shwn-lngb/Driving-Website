@@ -1,0 +1,136 @@
+section.course-form-container {
+	padding: 5em 0;
+	width: 100%;
+}
+.course-form-container > div {
+	margin-inline: auto;
+	display: flex;
+	box-shadow: 3px 0 8px rgba(0, 0, 0, 0.383);
+	width: 45%;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.course-form-container div.form-header {
+	background: rgba(37, 37, 37, 0.623) url("../svg/shape.jpg");
+	padding: 2em 3em;
+	max-width: 100%;
+	text-align: center;
+	color: #fff;
+	background-blend-mode: color-burn;
+	background-position: center;
+	display: grid;
+	place-items: center;
+}
+.form-header h2 {
+	margin-top: -3em;
+}
+
+.course-form-container form {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.course-form-container form input {
+	width: 100%;
+	padding: 0.8em 0.4em 0.8em 2.5em;
+	color: rgb(78, 78, 78);
+	outline: none;
+	border: none;
+	background: rgb(245, 245, 245);
+}
+.para {
+	margin-bottom: 2em;
+	color: rgb(109, 105, 105);
+	margin-inline: 2em;
+	text-align: center;
+	margin-top: 3em;
+}
+.course-form-container form button {
+	width: 60%;
+	padding: 0.6em 0;
+	margin-top: 1.5em;
+	background: rgb(211, 132, 43);
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 5em;
+}
+.design-form {
+	width: 100%;
+	min-height: 50px;
+	background: linear-gradient(to left, rgb(22, 109, 121), rgb(17, 74, 82));
+}
+
+.checkboxes {
+	width: 60%;
+	display: flex;
+	align-items: center;
+	outline: none;
+	/* border: none; */
+	border: 1px solid rgba(184, 159, 184, 0.3);
+	padding: 0.6em;
+	color: rgb(87, 85, 85);
+	margin-bottom: 2em;
+}
+.checkboxes input {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.form-icons i {
+	position: absolute;
+	left: 0.5em;
+	color: burlywood;
+}
+.form-icons {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2em;
+	width: 60%;
+}
+
+/* media queries */
+@media (max-width: 1600px) {
+	.course-form-container > div {
+		width: 60%;
+	}
+}
+
+@media (max-width: 1440px) {
+	.course-form-container > div {
+		width: 80%;
+	}
+}
+
+@media (max-width: 800px) {
+	.course-form-container > div {
+		flex-flow: column;
+	}
+	.form-header h2 {
+		margin: 0;
+		font-size: 1.2em;
+	}
+	.design-form {
+		display: none;
+	}
+}
+@media (max-width: 500px) {
+	.course-form-container > div {
+		width: 100%;
+		border-radius: 0;
+	}
+	.form-icons {
+		width: 90%;
+	}
+	.checkboxes {
+		width: 90%;
+	}
+	.course-form-container form button {
+		width: 90%;
+	}
+	section.course-form-container {
+		padding: 0em 0;
+	}
+}

@@ -1,0 +1,91 @@
+section.feedback-section {
+	margin-top: 7em;
+	padding-bottom: 2em;
+	background: rgb(225, 230, 233);
+}
+
+.feedback-form {
+	position: relative;
+	top: -30px;
+	padding: 3em;
+	display: grid;
+	grid-gap: 0.7em;
+	grid-template-columns: 1fr 1fr;
+	background: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.185);
+}
+
+.feedback-form-header {
+	display: grid;
+	grid-column: span 2;
+	place-items: center;
+	font-size: 1.8em;
+}
+
+.feedback-form input {
+	width: 100%;
+	outline: none;
+	border: none;
+	padding: 1.5em;
+	padding-right: 3em;
+	background: rgb(245, 245, 245);
+}
+.feedback-form textarea {
+	display: grid;
+	grid-column: span 2;
+	resize: none;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 15em;
+	max-height: 15em;
+	outline: none;
+	padding: 1em;
+	border: none;
+	overflow-y: hidden;
+	background: rgb(245, 245, 245);
+}
+.feedback-form button {
+	padding: 0.6em;
+	margin-top: 2em;
+	background: rgb(212, 164, 42);
+	color: white;
+	font-size: 1.05em;
+}
+.fb-input-icon {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2em;
+}
+.fb-input-icon i {
+	position: absolute;
+	right: 0.75em;
+	color: burlywood;
+}
+@media (max-width: 1024px) {
+	section.feedback-section {
+		padding-bottom: 0;
+		margin-bottom: 3em;
+	}
+	.feedback-form {
+		top: 0;
+		box-shadow: none;
+	}
+	.feedback-form button {
+		min-width: 30%;
+	}
+}
+@media (max-width: 768px) {
+	.feedback-form {
+		grid-template-columns: 1fr;
+	}
+	.fb-input-icon {
+		width: 100%;
+	}
+	.feedback-form textarea {
+		grid-column: span 1;
+	}
+	.feedback-form-header {
+		grid-column: span 1;
+	}
+}

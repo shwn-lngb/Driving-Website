@@ -1,0 +1,234 @@
+:root {
+	--admin-main-bg-color: hsl(240, 10%, 10%);
+	--admin-menu-bg-color: #1e1e24;
+	--admin-logo-bg-color: rgb(231, 231, 231);
+	--admin-menu-header-color: rgb(153, 153, 177);
+	--admin-menu-li-color: rgb(203, 203, 214);
+	--admin-elements-color: #28282f;
+}
+.admin-panel-wrapper {
+	width: 100%;
+	height: 100vh;
+	background: var(--admin-main-bg-color);
+	display: grid;
+	grid-template-columns: 0.2fr 1fr;
+}
+.admin-panel-wrapper #menu {
+	background: var(--admin-menu-bg-color);
+	padding: 1.5em 2em;
+	color: var(--admin-menu-header-color);
+}
+
+/** Menu
+/** Logo */
+#menu .menu-top {
+	display: grid;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2em;
+}
+#menu .logo {
+	cursor: pointer;
+	color: var(--admin-logo-bg-color);
+}
+#menu .logo i {
+	font-size: 1.2em;
+}
+#menu span {
+	margin-left: 0.3em;
+	font-size: 1.2em;
+	color: var(--admin-logo-bg-color);
+}
+/** Logo End */
+
+/** Hamburger Menu */
+#menu .hamburger-container {
+	width: fit-content;
+	height: fit-content;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+#menu .hamburger-container .hamburger {
+	position: relative;
+	width: 1.2em;
+	height: 0.1em;
+	background: var(--admin-logo-bg-color);
+}
+.hamburger::before,
+.hamburger::after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background: inherit;
+}
+.hamburger::before {
+	top: -0.3em;
+	transition: 0.3s ease-in-out;
+}
+
+.hamburger::after {
+	bottom: -0.3em;
+	transition: 0.3s ease-in-out;
+}
+
+/** Hamburger Menu End */
+
+#menu ul .menu-header {
+	margin-bottom: 1em;
+}
+#menu ul li {
+	position: relative;
+	color: var(--admin-menu-li-color);
+	display: grid;
+	grid-template-columns: 0.15fr 1fr 0.15fr;
+	grid-template-rows: 0.15fr 1fr;
+	gap: 0.6em 0.2em;
+	margin-left: 0.5em;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+#menu ul li:hover {
+	color: rgb(110, 110, 196);
+}
+
+#menu ul li .fa-chevron-down {
+	font-size: 0.7em;
+	display: flex;
+	align-items: center;
+}
+
+/** Menu end 
+
+/*# Dashboard */
+.dashboard {
+	display: grid;
+	grid-template-rows: 0.1fr 1fr;
+	grid-gap: 1em;
+}
+/** Navigation */
+.admin-panel-wrapper nav {
+	/* height: 4em; */
+	background: var(--admin-elements-color);
+	display: grid;
+	place-items: center;
+	grid-template-columns: 8fr 1fr 1fr;
+	color: white;
+}
+.admin-panel-wrapper nav .search {
+	margin-left: 3em;
+	width: 100%;
+}
+.admin-panel-wrapper nav .search input {
+	background: #5c5c6b;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	padding: 0.6em;
+	color: rgb(202, 202, 202);
+}
+.admin-panel-wrapper nav .search input::placeholder {
+	color: rgb(202, 202, 202);
+}
+.admin-panel-wrapper nav .search i {
+	margin-inline: 1em;
+}
+.admin-panel-wrapper nav .font-large-icon {
+	font-size: 1.2em;
+}
+.admin-panel-wrapper nav .search button {
+	padding: 0.57em 0.1em;
+	background: #a0a0ac;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+/** Navigation End*/
+
+/** Box */
+.boxes {
+	display: grid;
+	grid-template-rows: 1fr 3fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-flow: row;
+	grid-gap: 1em;
+	color: white;
+	margin: 1em;
+}
+.box {
+	background: var(--admin-elements-color);
+	border-radius: 0.4em;
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5em 1em;
+}
+.box-content-header {
+	color: var(--admin-menu-li-color);
+	font-size: 1em;
+	margin-top: 0.4em;
+}
+.box-main-content {
+	font-size: 1.5em;
+}
+.box-contents {
+	display: grid;
+	grid-template-columns: 6fr 1fr;
+}
+.chart {
+	width: 5em;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 3em;
+	margin-right: 1em;
+}
+.chart .bar {
+	background: steelblue;
+	width: 12px;
+	margin-left: 0.6em;
+	position: relative;
+}
+.chart .bar:hover {
+	background: rgb(106, 188, 255);
+}
+.chart .bar1 {
+	height: 15px;
+}
+.chart .bar2 {
+	height: 20px;
+}
+.chart .bar3 {
+	height: 16px;
+}
+.chart .bar4 {
+	height: 30px;
+}
+.tooltip {
+	position: absolute;
+	visibility: hidden;
+	display: block;
+	font-size: 0.8em;
+	color: rgb(99, 98, 98);
+	padding: 0.2em 0.3em;
+	background: #fff;
+	transition: 0.3 ease;
+	pointer-events: none;
+	z-index: 2;
+}
+.chart .bar:hover .tooltip {
+	visibility: visible;
+	bottom: 0.6em;
+	left: 0.3em;
+}
+.box-content-riseFall {
+	color: rgb(36, 194, 141);
+	display: flex;
+	margin-top: 2em;
+}
+.box-content-riseFall i {
+	font-size: 0.8em;
+	align-self: center;
+}
+
+/** Box End */

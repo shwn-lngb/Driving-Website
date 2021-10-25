@@ -1,0 +1,85 @@
+.background-ad-cover {
+	background: rgba(33, 28, 39, 0.781);
+	background-image: url("../svg/background.png");
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: color-burn;
+	margin: 1em 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-inline: 1em;
+	color: white;
+	margin-top: 6em;
+}
+
+.school-info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-inline: 4em;
+	/* justify-items: center; */
+	margin-bottom: 3em;
+	row-gap: 4em;
+}
+
+.vector-traffic {
+	width: 40ch;
+	height: 40ch;
+}
+@media (max-width: 1440px) {
+	section.school-info {
+		font-size: 0.9em;
+		padding-inline: none;
+		text-align: justify;
+	}
+	.vector-traffic {
+		width: 100%;
+		height: 25ch;
+	}
+	.school-about {
+		width: 100%;
+	}
+}
+@media (max-width: 900px) {
+	.school-info {
+		grid-template-columns: 1fr;
+		row-gap: 4em;
+	}
+	.image object {
+		display: none;
+	}
+	.m-vector7 {
+		margin-right: 0em;
+	}
+	.vector-traffic {
+		width: 20ch;
+		height: 20ch;
+	}
+}
+
+.school-history h2 {
+	margin-bottom: 1em;
+}
+.m-vector7 {
+	margin-right: 7em;
+}
+
+.image2 {
+	display: grid;
+	place-items: center end;
+}
+.car900px {
+	display: flex;
+	justify-content: space-around;
+}
+
+@media (max-width: 400px) {
+	.school-info {
+		padding-inline: 1em;
+		row-gap: 4em;
+	}
+}
